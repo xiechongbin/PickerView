@@ -10,7 +10,6 @@
 ### [English Document](https://github.com/Bigkoo/Android-PickerView/blob/master/README-en.md)
 
 ## 感谢项目原作者
-- WheelView
 - [Android-PickerView](https://github.com/Bigkoo/Android-PickerView/)
 
 由于项目需要，在此基础上新增去除3D滚轮效果的设置
