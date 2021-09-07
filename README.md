@@ -51,27 +51,7 @@
 * 正确使用案例：
   startDate.set(2013,0,1);
   endDate.set(2020,11,1);
-
- #### V4.1.9 版本更新说明（2019-10-20）
-   - 修复: 农历 day 偶现越界的问题。
-   - 优化: 显示布局中英文默认大写问题。
-   - 新增: 最大可见项的数目提供API给开发者设置。(setItemVisibleCount())
-   - 新增: 滚轮从中间到两边透明度渐变，提供开关API设置。（isAlphaGradient(true)）
-   - 新增: 选中项圆形分割线样式。（DividerType.CIRCLE）
-
- #### V4.1.8 版本更新说明（2019-4-24）
- -  更新gradle版本， wheelview基础库由 compile 改为 api 依赖，避免gradle 5.0+版本无法引入。
- -  修复 setTextXOffset 赋值问题。
   
- #### V4.1.7 版本更新说明（2019-1-10）
- -  修复 WheelView在初始化时，数据为空导致height=0，造成一直显示不出来的问题。
- -  新增取消按钮的点击事件监听入口。
- -  参数注解添加，规范数据类型。
- -  废弃setBackgroundId方法， 更新方法命名为 setOutSideColor。
-
-
-#### 更多历史版本详情，请查阅：[更新日志（4.x版本）](https://github.com/Bigkoo/Android-PickerView/wiki/更新日志（4.x版本）) 
-
 #### 方法名与参数请查阅：[方法名与参数说明文档](https://github.com/Bigkoo/Android-PickerView/wiki/%E6%96%B9%E6%B3%95%E5%90%8D%E4%B8%8E%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E%EF%BC%883.x%E7%89%88%E6%9C%AC%EF%BC%89)
 
 </br>
@@ -291,10 +271,6 @@ WheelView wheelView = findViewById(R.id.wheelview);
             }
         });
 ```
-
-
-### 效果图（招行信用卡的“掌上生活”里面条件选择器他们用的就是我这个库，大家可以当实际项目参考）
-![](https://github.com/saiwu-bigkoo/Android-PickerView/blob/master/preview/pickerdemo_zhangshangshenghuo.gif)
 
 
 ### Thanks
