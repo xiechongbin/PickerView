@@ -9,15 +9,6 @@
 
 ### [English Document](https://github.com/Bigkoo/Android-PickerView/blob/master/README-en.md)
 
-### 注意事项、详请使用方式、更新日志等，请查看 [Wiki文档](https://github.com/Bigkoo/Android-PickerView/wiki)
-**Wiki文档，Wiki文档，Wiki文档 !~ 重要的事情说三遍**
-
-#### 对于使用上有任何疑问或优化建议等，欢迎加入QQ群讨论交流技术问题。
-
-交流群1： 387051294（推荐）
-
-交流群2： 219962328（已满）
-
 ## 介绍
 
 这是一款仿iOS的PickerView控件，有时间选择器和选项选择器，新版本的详细特性如下：
