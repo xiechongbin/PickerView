@@ -9,9 +9,15 @@
 
 ### [English Document](https://github.com/Bigkoo/Android-PickerView/blob/master/README-en.md)
 
+## 感谢项目原作者
+- WheelView
+- [Android-PickerView](https://github.com/Bigkoo/Android-PickerView/)
+
+由于项目需要，在此基础上新增去除3D滚轮效果的设置
+
 ## 介绍
 
-这是一款仿iOS的PickerView控件，有时间选择器和选项选择器，新版本的详细特性如下：
+仿iOS的PickerView控件：
  
 ——TimePickerView  时间选择器，支持年月日时分，年月日，年月，时分等格式。   
 ——OptionsPickerView  选项选择器，支持一，二，三级选项选择，并且可以设置是否联动 。
