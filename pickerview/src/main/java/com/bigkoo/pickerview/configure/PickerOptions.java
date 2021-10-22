@@ -39,6 +39,9 @@ public class PickerOptions {
     public OnTimeSelectChangeListener timeSelectChangeListener;
     public OnOptionsSelectChangeListener optionsSelectChangeListener;
     public CustomListener customListener;
+    public static final String ORDER_YEAR_MONTH_DAY = "order_year_month_day";
+    public static final String ORDER_DAY_MONTH_YEAR = "order_day_month_year";
+    public String date_order = ORDER_YEAR_MONTH_DAY;
 
     //options picker
     public String label1, label2, label3;//单位字符
@@ -70,9 +73,9 @@ public class PickerOptions {
 
     public PickerOptions(int buildType) {
         if (buildType == TYPE_PICKER_OPTIONS) {
-            layoutRes = R.layout.pickerview_options;
+            layoutRes = R.layout.picker_view_options;
         } else {
-            layoutRes = R.layout.pickerview_time;
+            layoutRes = R.layout.picker_view_year_month_day_time;
         }
     }
 

@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import com.bigkoo.pickerview.builder.OptionsPickerBuilder;
 import com.bigkoo.pickerview.builder.TimePickerBuilder;
+import com.bigkoo.pickerview.configure.PickerOptions;
 import com.bigkoo.pickerview.listener.CustomListener;
 import com.bigkoo.pickerview.listener.OnOptionsSelectChangeListener;
 import com.bigkoo.pickerview.listener.OnOptionsSelectListener;
@@ -144,6 +145,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         })
                 .setDate(selectedDate)
                 .setRangDate(startDate, endDate)
+                .setOrder(PickerOptions.ORDER_DAY_MONTH_YEAR)
                 .setLayoutRes(R.layout.pickerview_custom_lunar, new CustomListener() {
 
                     @Override
@@ -229,6 +231,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .setItemVisibleCount(5) //若设置偶数，实际值会加1（比如设置6，则最大可见条目为7）
                 .setLineSpacingMultiplier(2.0f)
                 .setDividerColor(Color.RED)
+                .setOrder(PickerOptions.ORDER_DAY_MONTH_YEAR)
                 .setTextColorCenter(Color.parseColor("#000000"))
                 .setCenterTypeface(Typeface.DEFAULT_BOLD)
                 .setDividerWidth(DensityUtil.dp2px(this, 11f))

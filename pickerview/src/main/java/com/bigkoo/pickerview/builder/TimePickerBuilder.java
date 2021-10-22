@@ -185,6 +185,13 @@ public class TimePickerBuilder {
         return this;
     }
 
+    /**
+     * 设置是展示年月日 还是日月年
+     */
+    public TimePickerBuilder setOrder(String order) {
+        mPickerOptions.date_order = order;
+        return this;
+    }
 
     /**
      * 设置间距倍数,但是只能在1.0-4.0f之间

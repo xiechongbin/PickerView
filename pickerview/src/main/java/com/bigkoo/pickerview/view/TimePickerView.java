@@ -40,7 +40,11 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
         initAnim();
 
         if (mPickerOptions.customListener == null) {
-            LayoutInflater.from(context).inflate(R.layout.pickerview_time, contentContainer);
+            if (mPickerOptions.date_order.equals(PickerOptions.ORDER_DAY_MONTH_YEAR)) {
+                LayoutInflater.from(context).inflate(R.layout.picker_view_day_month_year_time, contentContainer);
+            } else {
+                LayoutInflater.from(context).inflate(R.layout.picker_view_year_month_day_time, contentContainer);
+            }
 
             //顶部标题
             TextView tvTitle = (TextView) findViewById(R.id.tvTitle);
