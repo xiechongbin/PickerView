@@ -151,6 +151,8 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
         wheelTime.setTextColorCenter(mPickerOptions.textColorCenter);
         wheelTime.isCenterLabel(mPickerOptions.isCenterLabel);
         wheelTime.setIsOpen3D(mPickerOptions.isOpen3D);
+        wheelTime.isSetCenterBackground(mPickerOptions.isSetCenterBackground);
+        wheelTime.setCenterBackgroundColor(mPickerOptions.centerBackgroundColor);
     }
 
 

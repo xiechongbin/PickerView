@@ -157,6 +157,22 @@ public class TimePickerBuilder {
     }
 
     /**
+     * 是否设置中间部分的背景颜色
+     */
+    public TimePickerBuilder isSetCenterBackground(boolean isSetCenterBackground) {
+        mPickerOptions.isSetCenterBackground = isSetCenterBackground;
+        return this;
+    }
+
+    /**
+     * 设置中间部分的背景颜色
+     */
+    public TimePickerBuilder setCenterBackgroundColor(int centerBackgroundColor) {
+        mPickerOptions.centerBackgroundColor = centerBackgroundColor;
+        return this;
+    }
+
+    /**
      * 因为系统Calendar的月份是从0-11的,所以如果是调用Calendar的set方法来设置时间,月份的范围也要是从0-11
      *
      * @param date

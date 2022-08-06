@@ -456,4 +456,22 @@ public class WheelOptions<T> {
         wv_option2.setOpen3D(isOpen3D);
         wv_option3.setOpen3D(isOpen3D);
     }
+
+    /**
+     * 是否设置中间部分的背景颜色
+     */
+    public void isSetCenterBackground(boolean isSetCenterBackground) {
+        wv_option1.isSetCenterBackground(isSetCenterBackground);
+        wv_option2.isSetCenterBackground(isSetCenterBackground);
+        wv_option3.isSetCenterBackground(isSetCenterBackground);
+    }
+
+    /**
+     * 设置中间部分的背景颜色
+     */
+    public void setCenterBackgroundColor(int centerBackgroundColor) {
+        wv_option1.setCenterBackgroundColor(centerBackgroundColor);
+        wv_option2.setCenterBackgroundColor(centerBackgroundColor);
+        wv_option3.setCenterBackgroundColor(centerBackgroundColor);
+    }
 }

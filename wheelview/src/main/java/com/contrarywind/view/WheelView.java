@@ -3,6 +3,7 @@ package com.contrarywind.view;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.Typeface;
@@ -61,6 +62,7 @@ public class WheelView extends View {
     private Paint paintOuterText;
     private Paint paintCenterText;
     private Paint paintIndicator;
+    private Paint paintBackGround;
 
     private WheelAdapter adapter;
 
@@ -127,6 +129,12 @@ public class WheelView extends View {
 
     //是否开启3D
     private boolean isOpen3D = false;
+
+    //是否设置中间部分的背景颜色
+    private boolean isSetCenterBackground = false;
+    //中间部分的背景颜色
+    private int centerBackgroundColor = Color.WHITE;
+
 
     public WheelView(Context context) {
         this(context, null);
@@ -206,6 +214,10 @@ public class WheelView extends View {
         paintIndicator = new Paint();
         paintIndicator.setColor(dividerColor);
         paintIndicator.setAntiAlias(true);
+
+        paintBackGround = new Paint();
+        paintBackGround.setColor(Color.RED);
+        paintBackGround.setAntiAlias(true);
 
         setLayerType(LAYER_TYPE_SOFTWARE, null);
     }
@@ -314,6 +326,7 @@ public class WheelView extends View {
 
     /**
      * 设置中间文字的字体
+     *
      * @param typeface
      */
     public final void setCenterTypeFace(Typeface typeface) {
@@ -440,6 +453,12 @@ public class WheelView extends View {
             endX = measuredWidth - startX;
             canvas.drawLine(startX, firstLineY, endX, firstLineY, paintIndicator);
             canvas.drawLine(startX, secondLineY, endX, secondLineY, paintIndicator);
+
+            if (isSetCenterBackground) {
+                paintBackGround.setColor(centerBackgroundColor);
+                canvas.drawRect(startX, firstLineY, endX, secondLineY, paintBackGround);
+            }
+
         } else if (dividerType == DividerType.CIRCLE) {
             //分割线为圆圈形状
             paintIndicator.setStyle(Paint.Style.STROKE);
@@ -461,6 +480,10 @@ public class WheelView extends View {
         } else {
             canvas.drawLine(0.0F, firstLineY, measuredWidth, firstLineY, paintIndicator);
             canvas.drawLine(0.0F, secondLineY, measuredWidth, secondLineY, paintIndicator);
+            if (isSetCenterBackground) {
+                paintBackGround.setColor(centerBackgroundColor);
+                canvas.drawRect(0.0F, firstLineY, measuredWidth, secondLineY, paintBackGround);
+            }
         }
 
         //只显示选中项Label文字的模式，并且Label文字不为空，则进行绘制
@@ -927,6 +950,20 @@ public class WheelView extends View {
                 paintCenterText.setTextScaleX(1.1F);
             }
         }
+    }
+
+    /**
+     * 是否设置中间部分的背景颜色
+     */
+    public void isSetCenterBackground(boolean isSetCenterBackground) {
+        this.isSetCenterBackground = isSetCenterBackground;
+    }
+
+    /**
+     * 设置中间部分的背景颜色
+     */
+    public void setCenterBackgroundColor(int centerBackgroundColor) {
+        this.centerBackgroundColor = centerBackgroundColor;
     }
 
     public boolean isLoop() {

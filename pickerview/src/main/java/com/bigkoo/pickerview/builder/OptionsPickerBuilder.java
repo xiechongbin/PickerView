@@ -292,6 +292,23 @@ public class OptionsPickerBuilder {
     }
 
     /**
+     * 是否设置中间部分的背景颜色
+     */
+    public OptionsPickerBuilder isSetCenterBackground(boolean isSetCenterBackground) {
+        mPickerOptions.isSetCenterBackground = isSetCenterBackground;
+        return this;
+    }
+
+    /**
+     * 设置中间部分的背景颜色
+     */
+    public OptionsPickerBuilder setCenterBackgroundColor(int centerBackgroundColor) {
+        mPickerOptions.centerBackgroundColor = centerBackgroundColor;
+        return this;
+    }
+
+
+    /**
      * 切换选项时，是否还原第一项
      *
      * @param isRestoreItem true：还原； false: 保持上一个选项

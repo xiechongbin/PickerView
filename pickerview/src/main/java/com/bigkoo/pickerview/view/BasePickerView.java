@@ -90,6 +90,7 @@ public class BasePickerView {
                 rootView.setBackgroundColor(mPickerOptions.outSideColor);
             }
             //这个是真正要加载时间选取器的父布局
+           // params.bottomMargin = 160;
             contentContainer = (ViewGroup) rootView.findViewById(R.id.content_container);
             contentContainer.setLayoutParams(params);
         }

@@ -1,6 +1,7 @@
 package com.bigkoo.pickerview.configure;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.view.Gravity;
 import android.view.View;
@@ -117,4 +118,6 @@ public class PickerOptions {
     public int itemsVisibleCount = 9; //最大可见条目数
     public boolean isAlphaGradient = false; //透明度渐变
     public boolean isOpen3D = false; //是否支持3d
+    public boolean isSetCenterBackground = false; //是否设置中间背景色
+    public int centerBackgroundColor = Color.WHITE; //中间背景色
 }

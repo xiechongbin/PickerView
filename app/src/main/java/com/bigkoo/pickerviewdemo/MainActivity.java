@@ -68,11 +68,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         getOptionData();
 
         initTimePicker();
-        initCustomTimePicker();
-        initLunarPicker();
-        initOptionPicker();
-        initCustomOptionPicker();
-        initNoLinkOptionsPicker();
+        //initCustomTimePicker();
+        // initLunarPicker();
+        // initOptionPicker();
+        // initCustomOptionPicker();
+        // initNoLinkOptionsPicker();
         initOptionsView();
 
         Button btn_Time = (Button) findViewById(R.id.btn_Time);
@@ -468,6 +468,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         })
                 .setItemVisibleCount(5)
                 .isOpen3D(false)
+                .isSetCenterBackground(true)
+                .setCenterBackgroundColor(Color.BLUE)
                 .setDividerColor(Color.parseColor("#e4e4e4"))
                 .setDividerWidth(DensityUtil.dp2px(this, 0.5f))
                 .setContentTextSize(16)

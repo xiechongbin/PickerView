@@ -825,6 +825,7 @@ public class WheelTime {
 
     /**
      * 设置分割线高度
+     *
      * @param dividerWidth
      */
     public void setDividerWidth(float dividerWidth) {
@@ -948,5 +949,29 @@ public class WheelTime {
         wv_hours.setOpen3D(isOpen3D);
         wv_minutes.setOpen3D(isOpen3D);
         wv_seconds.setOpen3D(isOpen3D);
+    }
+
+    /**
+     * 是否设置中间部分的背景颜色
+     */
+    public void isSetCenterBackground(boolean isSetCenterBackground) {
+        wv_day.isSetCenterBackground(isSetCenterBackground);
+        wv_month.isSetCenterBackground(isSetCenterBackground);
+        wv_year.isSetCenterBackground(isSetCenterBackground);
+        wv_hours.isSetCenterBackground(isSetCenterBackground);
+        wv_minutes.isSetCenterBackground(isSetCenterBackground);
+        wv_seconds.isSetCenterBackground(isSetCenterBackground);
+    }
+
+    /**
+     * 设置中间部分的背景颜色
+     */
+    public void setCenterBackgroundColor(int centerBackgroundColor) {
+        wv_day.setCenterBackgroundColor(centerBackgroundColor);
+        wv_month.setCenterBackgroundColor(centerBackgroundColor);
+        wv_year.setCenterBackgroundColor(centerBackgroundColor);
+        wv_hours.setCenterBackgroundColor(centerBackgroundColor);
+        wv_minutes.setCenterBackgroundColor(centerBackgroundColor);
+        wv_seconds.setCenterBackgroundColor(centerBackgroundColor);
     }
 }
