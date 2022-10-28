@@ -149,13 +149,8 @@ public class BasePickerView {
     public void showView(View v, boolean isAnim, boolean requestFocus) {
         this.clickView = v;
         this.isAnim = isAnim;
-        showView(isAnim, requestFocus);
+        showView(requestFocus);
     }
-
-    public void showView(boolean isAnim, boolean requestFocus) {
-        show(null, isAnim);
-    }
-
 
     /**
      * 添加View到根视图
