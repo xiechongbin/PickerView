@@ -142,6 +142,39 @@ public class BasePickerView {
         }
     }
 
+    /**
+     * @param v      (是通过哪个View弹出的)
+     * @param isAnim 是否显示动画效果
+     */
+    public void showView(View v, boolean isAnim, boolean requestFocus) {
+        this.clickView = v;
+        this.isAnim = isAnim;
+        showView(isAnim, requestFocus);
+    }
+
+    public void showView(boolean isAnim, boolean requestFocus) {
+        show(null, isAnim);
+    }
+
+
+    /**
+     * 添加View到根视图
+     */
+    public void showView(boolean requestFocus) {
+        if (isDialog()) {
+            showDialog();
+        } else {
+            if (isShowing()) {
+                return;
+            }
+            isShowing = true;
+            onAttached(rootView);
+            if (requestFocus) {
+                rootView.requestFocus();
+            }
+        }
+    }
+
 
     /**
      * show的时候调用

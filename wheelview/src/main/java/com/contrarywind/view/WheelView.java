@@ -314,11 +314,11 @@ public class WheelView extends View {
      *
      * @param cyclic 是否循环
      */
-    public final void setCyclic(boolean cyclic) {
+    public void setCyclic(boolean cyclic) {
         isLoop = cyclic;
     }
 
-    public final void setTypeface(Typeface font) {
+    public void setTypeface(Typeface font) {
         typeface = font;
         paintOuterText.setTypeface(typeface);
         paintCenterText.setTypeface(typeface);
@@ -329,12 +329,12 @@ public class WheelView extends View {
      *
      * @param typeface
      */
-    public final void setCenterTypeFace(Typeface typeface) {
+    public void setCenterTypeFace(Typeface typeface) {
         typefaceCenter = typeface;
         paintCenterText.setTypeface(typefaceCenter);
     }
 
-    public final void setTextSize(float size) {
+    public void setTextSize(float size) {
         if (size > 0.0F) {
             textSize = (int) (context.getResources().getDisplayMetrics().density * size);
             paintOuterText.setTextSize(textSize);
